@@ -13,12 +13,12 @@ enfin on cofigure le réseau local en 192.168.13.0/24 qui est donc une adresse d
 on configure donc l'ip de la passerelle côté LAN à la dernière IP valide: 192.121.13.254
 ainsi que son masque en valeur totale(non octale).
 <br><br>
-on a alors la fenètre suivante:![image](/home/s4uc3/Bureau/SAE12/interface_routeur.jpg)<br>
+on a alors la fenètre suivante:![image](interface_routeur.jpg)<br>
 on peut alors mettre en place les ip et les routes des postes de travails dans le LAN en 192.168.13.252 et 192.168.13.253<br>
-![image](/home/s4uc3/Bureau/SAE12/ip_a_192.169.jpg)<br><br>
+![image](ip_a_192.169.jpg)<br><br>
 nous allons maintenant réaliser la même chose pour notre deuxième réseau. Brancher le pc, exécuter dhclient, se connecter à la page d'administration et configurer le réseau externe et le LAN. pour ce deuxième réseau, l'ip du routeur sera 10.202.71.254(en suivant les même règles), le LAN sera lui en 172.121.8.0/24.<br><br>
 
-on configure ensuite les route des machines à l'intérieur du LAN pour qu'elles puissent joindre le routeur en paramétrant la route par défaut.![image](/home/s4uc3/Bureau/SAE12/ip_a_172.121.jpg)
+on configure ensuite les route des machines à l'intérieur du LAN pour qu'elles puissent joindre le routeur en paramétrant la route par défaut.![image](ip_a_172.121.jpg)
 <br><br>
 il faudra ensuite ajouter une route statique entre les routeurs afin que la communication entre les postes client puisse se faire. Ainsi sur les deux routeurs, on passe en CLI(Command Line Interface) puis on rentre la commande suivante :
 ```

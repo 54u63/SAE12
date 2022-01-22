@@ -82,10 +82,10 @@ ou
 ```
 ethool eno1
 ```
-![image](/home/s4uc3/Bureau/SAE12/Screen_mii-tool_eth0.png)<br>
+![image](Screen_mii-tool_eth0.png)<br>
 ou
 <br>
-![image](/home/s4uc3/Bureau/SAE12/screen_ethtool_wlan0.png)<br>
+![image](screen_ethtool_wlan0.png)<br>
 note: dans le premier cas, eth0 n'est pas connecté<br> <br>
 Si aucun de ces deux ne fonctionnent il est
 possible que le système d'exploitation ne fasse pas la traduction entre le nom original
@@ -112,13 +112,13 @@ problème ne vient pas de l'interface physique.
  par l'interface en question (eno1, eth0,wlan0,enp0s1,...). Retournez vérifier la baie
  de brassage. Normalement les diodes doivent s'allumer.
 
- ![image](/home/s4uc3/Bureau/SAE12/wlan0_down.png)
+ ![image](wlan0_down.png)
 ici on peut voir que l'interface wlan0 est "down" -> éteinte<br>
 pour l'allumer celle ci on utilise
 la commande précisement citée:<br>
- ![image](/home/s4uc3/Bureau/SAE12/ip_link_set_up.png)<br>
+ ![image](ip_link_set_up.png)<br>
  et on a donc l'output suivant:
-![image](/home/s4uc3/Bureau/SAE12/wlan0_up.png)
+![image](wlan0_up.png)
 on voit ici que la carte est "UP"-> allumée
 
 
@@ -157,10 +157,10 @@ faire vous allez entrer
 ```
 ps aux | grep dhc 
 ```
-![image](/home/s4uc3/Bureau/SAE12/dhcp_actif.png)<br>
+![image](dhcp_actif.png)<br>
 si il n'y a qu'une seule ligne qui s'affiche, il n'y aura pas de
 problèmes avec le dhcp car il n'est pas lancé. Vous pouvez donc passer à l'étape suivante<br>
-![image](/home/s4uc3/Bureau/SAE12/pas_dhcp.png)
+![image](pas_dhcp.png)
 
 si ce n'est pas le cas, notez le chiffre sous la section PID ######
 puis executez la commande 
@@ -190,7 +190,7 @@ puis
 ip route flush dev <nom de l'interface>
 ```
  Bien maintenant entre simplement ip a (racourcis de ip address)
-et vous devriez obtenir quelque chose comme ça : ![image](/home/s4uc3/Bureau/SAE12/ip_a_ip_r_vide.png)
+et vous devriez obtenir quelque chose comme ça : ![image](ip_a_ip_r_vide.png)
  
 Bien, maintenant que la configuration réseau est vierge, nous allons pouvoir l'éditer. Commencer par vous munir de votre adresse IP et de votre valeur octale de masque(8,16,24,32) et entrez 
 ```
@@ -236,7 +236,7 @@ vous allez donc effectuer un ping vers la passerelle. Pour se faire vous allez e
 ping <ip de la passerelle>
 ```
 et vérifiez que vous reçevez des réponses <br>
-![image](/home/s4uc3/Bureau/SAE12/ping_passerelle.png)
+![image](ping_passerelle.png)
 
 si vous n'en reçevez pas c'est que la passerelle est peut être hors services ou que vous avez mal rentré votre ip ou votre route
 
@@ -308,7 +308,7 @@ dig avec la syntaxe:
 ```
 dig <url>
 ```
-![image](/home/s4uc3/Bureau/SAE12/dig_base.png)
+![image](dig_base.png)
 <br>
 maintenant observez la zone en ligne 
 ```
@@ -320,7 +320,7 @@ NOERROR
 ```
 c'est qu'il n'y a pas de problème et que le
 problème viens donc d'ailleur.<br>
-![image](/home/s4uc3/Bureau/SAE12/dig_NOERROR.png)
+![image](dig_NOERROR.png)
 
 si le status est :
 ```
@@ -337,7 +337,7 @@ cela veut dire que l'url que vous avez entré est invalide
 et que il n'y a donc pas de serveur relié au nom
 que vous essayez de joindre. Essayez sur un autre
 url.<br>
-![image](/home/s4uc3/Bureau/SAE12/dig_NXDOMAIN.png)
+![image](dig_NXDOMAIN.png)
 
 si le message est:
 ```
